@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CheckBox Tree - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../demo.css">
+	<script type="text/javascript" src="../../jquery.min.js"></script>
+	<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+</head>
+<body>
+	<h2>CheckBox Tree</h2>
+	<p>Tree nodes with check boxes.</p>
+	<div style="margin:20px 0;">
+		<a href="#" class="easyui-linkbutton" onclick="getChecked()">GetChecked</a> 
+	</div>
+	<div style="margin:10px 0">
+		<input type="checkbox" checked onchange="$('#tt').tree({cascadeCheck:$(this).is(':checked')})">CascadeCheck 
+		<input type="checkbox" onchange="$('#tt').tree({onlyLeafCheck:$(this).is(':checked')})">OnlyLeafCheck
+	</div>
+	<div class="easyui-panel" style="padding:5px">
+		<ul id="tt" class="easyui-tree" data-options="url:'tree_data1.json',method:'get',animate:true,checkbox:true"></ul>
+	</div>
+	
+	<div class="easyui-panel" style="padding:5px">
+		        <ul id="treev" class="easyui-tree" data-options="checkbox:true" >
+           </ul>
+	</div>
+	
+	<script type="text/javascript">
+		function getChecked(){
+			var nodes = $('#tt').tree('getChecked');
+			var s = '';
+			for(var i=0; i<nodes.length; i++){
+				if (s != '') s += ',';
+				s += nodes[i].text;
+			}
+			alert(s);
+		}
+
+		var flatData = [
+		  { id: 1, parent: 0, text: "Item 1" },
+		  { id: 2, parent: 0, text: "Item 2" },
+		  { id: 3, parent: 0, text: "Item 3" },
+		  { id: 4, parent: 0, text: "Item 4" },
+		  { id: 5, parent: 1, text: "Item 1.1" },
+		  { id: 6, parent: 1, text: "Item 1.2" },
+		  { id: 7, parent: 1, text: "Item 1.3" },
+		  { id: 8, parent: 3, text: "Item 3.1" },
+		  { id: 9, parent: 3, text: "Item 3.2" },
+		  { id: 10, parent: 5, text: "Item 1.1.1" },
+		  { id: 11, parent: 5, text: "Item 1.1.2" },
+		  { id: 12, parent: 5, text: "Item 1.1.3" }
+		];
+
+		function processTable(data, idField, foreignKey, rootLevel) {
+		  var hash = {};
+
+		  for (var i = 0; i < data.length; i++) {
+		    var item = data[i];
+		    var id = item[idField];
+		    var parentId = item[foreignKey];
+
+		    hash[id] = hash[id] || [];
+		    hash[parentId] = hash[parentId] || [];
+
+		    item.children = hash[id];
+		    hash[parentId].push(item);
+		  }
+
+		  return hash[rootLevel];
+		}
+		$('#treev').tree('loadData',
+		                  processTable(flatData, "id", "parent", 0));
+// 		$('#treev').tree({
+// 		     onSelect:function(node,checked){
+// 		               alert(node);
+// 		         },
+// 		    onCheck:function(node,checked){
+// 		               alert(1);
+// 		         }
+// 		});
+		console.log( processTable(flatData, "id", "parent", 0));
+		
+		
+	</script>
+</body>
+</html>

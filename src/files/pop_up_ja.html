@@ -1,0 +1,174 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>$서비스명$ 이용약관 변경 안내</title>
+<link rel="stylesheet" type="text/css" href="../css/bizplay_terms1.css" media="all">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/publishing.ui.library.3.0.0.js"></script>
+<script type="text/javascript" src="../js/cmd.js"></script>
+</head>
+<body>
+<article class="no_termsDate greenMessage">
+	<a  class="bt_popClose" style="cursor: pointer"><span class="blind">종료</span></a>
+	<div class="termsWrap">
+		<h2 class="termsTit_h2">이용약관 변경 공지</h2>
+		<div>
+			<p class="termsDesc_p">
+				안녕하세요 비즈플레이입니다.<br>
+				저희 비즈플레이를 이용해 주시는 고객 여러분들께 감사의 인사를 드립니다.<br>
+				그린메세지 APP 이용약관 변경에 대한 안내를 드리오니, 아래 내용 참고하시어 서비스 이용에 불편 없으시길 바랍니다.
+			</p>
+		</div>
+		<section>
+			<h4 class="termsTit_h4">시행일자 : <span id="">2022년 08월 31일</span></h4>
+			<h4 class="termsTit_h4">주요 변경사항</h4>
+			<div class="termsTbl termsChange">
+				<table style="min-width:auto;">
+					<colgroup>
+					<col>
+					<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th><div>변경 전</div></th>
+							<th class="termsChange_after"><div>변경 후</div></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<div>
+									<h5>제2조 - 고객</h5>
+									<ul>
+										<li>기업 회원 : 서비스 이용계약을 체결하고 어드민 서비스를 이용하는 고객</li>
+										<li>개인 회원 : 회사가 제공하는 앱 서비스를 이용하는 고객</li>
+									</ul>
+								</div>
+							</td>
+							<td>
+								<div>
+									<h5>제2조 - 고객</h5>
+									<ul>
+										<li>서비스를 이용하는 기업(단체) 및 개인</li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div>
+									<h5>제4조 - 서비스 제공 내용</h5>
+									<ul>
+										<li>어드민 서비스 : 기업 회원이 제공하는 정보를 개인회원에게 전달하는 서비스</li>
+										<li>앱 서비스 : 기업이 제공하는 정보를 회사가 개인회원에게 전달하는 서비스</li>
+									</ul>
+								</div>
+							</td>
+							<td>
+								<div>
+									<h5>제4조 - 서비스 제공 내용</h5>
+									<ul>
+										<li>PC 앱 : 발송 내용을 수신, 확인하는 정보 제공 서비스</li>
+										<li>모바일 앱 : 고객이 제공하는 메세지를 사용자가 수신받는 정보 제공 서비스</li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div>
+									<h5>제5조 - 서비스 이용</h5>
+									<ul>
+										<li>서비스 최초 실행 시 약관 동의 후 가입신청하여 회사가 신청에 대해 승인함으로써 이용계약 체결</li>
+									</ul>
+								</div>
+							</td>
+							<td>
+								<div>
+									<h5>제5조 - 서비스 이용</h5>
+									<ul>
+										<li>서비스를 bizplay의 bizStore에서 구매하여 이용약관에 동의한 후 권한 부여 및 휴대폰 인증 후 서비스 이용 가능</li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<ol class="termsDepth_ol">
+				<li>
+					※ 변경된 이용약관 확인 경로 :<br>
+					PC 앱 - 우측 하단 '이용약관' 메뉴<br>
+					모바일 앱 - 더보기 &gt; 프로그램 정보 &gt; '서비스 이용약관' 메뉴
+				</li>
+			</ol>
+		</section>
+		<section class="tac" style="position:relative;">
+			<div class="chkBx">
+				<label for="">
+					<input id= "check" checked type="checkbox"><i></i>
+					<span href="#none">이 창을 다시 열지 않기</span>
+				</label>
+			</div>
+			<a  style="cursor: pointer" class="termsChange_cfrm">확인</a>
+		</section>
+	</div>
+	
+	
+</article>
+<form id="form"  method="post" target="_self">
+	<input type="hidden" value="" name="TERM_STTS" />
+</form>
+<script>
+/* $(window).unload(function() {
+	getSubmitForm();
+});
+ */
+
+var form = document.querySelector('form');
+$(".termsChange_cfrm, .bt_popClose").click(function(){
+	getSubmitForm();
+});
+
+
+form.onsubmit = (event) => {
+	event.preventDefault(); 
+	var isCheck = "N";
+	var input={};
+	if($("#check").attr("checked")==true){
+		//localStorage.setItem("isOpen", true)
+		isCheck = "Y";
+	}
+	
+  fetch('user_terms_u001.jct?_JSON_={"TERM_STTS":"'+isCheck+'"}', {	 
+      method: "POST",
+      body: new FormData(form)    
+    })
+    .then(response => response.ok)
+    .then(submitted => {
+      if (submitted)
+        window.close()
+    	window.location = "GMSG://%7B%22KEY%22%3A%220%22%7D"
+    })
+    .catch(err => {
+      window.opener.console.error(err)
+    })
+}
+function getSubmitForm() {
+	var isCheck = "N";
+	if($("#check").attr("checked")==true){
+		//localStorage.setItem("isOpen", true)
+		isCheck = "Y";
+	}
+ 	$('#form ipnut').val(isCheck);
+ 	$(form).submit();
+ 
+}
+</script>
+</body>
+</html>

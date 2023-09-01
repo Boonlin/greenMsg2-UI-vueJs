@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+<style type="text/css">
+
+table {
+	width: 100%;
+}
+
+textarea {
+	width: 100%; 
+	height: 200px;
+}
+
+iframe {
+	width: 100%; 
+	height: 200px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div>
+# send message popup api<br />
+<!-- <form action="/pop_gbox_pc_6010.act" method="post" target="_blank"> -->
+<form action="/pop_gbox_pc_6010.act" method="post" target="_blank">
+<table>
+	<tr>
+		<td>SAUP_NO</td>
+		<td>
+			<input type="text" name="SAUP_NO" value="2148635102" />
+		</td>
+	</tr>
+	<tr>
+		<td>PTL_USER_ID</td>
+		<td>
+			<input type="text" name="PTL_USER_ID" value="s_admin2" />
+		</td>
+	</tr>
+	<tr>
+		<td>CHHL_CODE</td>
+		<td>
+			<input type="text" name="CHNL_CODE" value="0001" />
+		</td>
+	</tr>
+	<tr>
+		<td>PTL_ID</td>
+		<td>
+			<input type="text" name="PTL_ID" value="PTL_51" />
+		</td>
+	</tr>
+	<tr>
+		<td>CHNL_ID</td>
+		<td>
+			<input type="text" name="CHNL_ID" value="CHNL_1" />
+		</td>
+	</tr>
+	<tr>
+		<td>USE_INTT_ID</td>
+		<td>
+			<input type="text" name="USE_INTT_ID" value="UTLZ_4" />
+		</td>
+	</tr>
+	<tr>
+		<td>SAUP_NM</td>
+		<td>
+			<input type="text" name="SAUP_NM" value="saup_nm" />
+		</td>
+	</tr>
+	<tr>
+		<td>MSG_CNTS</td>
+		<td>
+			<input type="text" name="MSG_CNTS" value="msg_cnts" />
+		</td>
+	</tr>
+	<tr>
+		<td>USER_REC</td>
+		<td>
+			<textarea name="USER_REC">{"USER_REC":[ 
+	{"HP_NO": "07099980001", "USER_NM": "Bonna"},
+	{"HP_NO": "07099980002", "USER_NM": "Chhon"},
+	{"HP_NO": "07099980003", "USER_NM": "Bonna1"},
+	{"HP_NO": "07099980004", "USER_NM": "Chhon1"},
+	{"HP_NO": "07099980005", "USER_NM": "Bonna2"},
+	{"HP_NO": "07099980006", "USER_NM": "Chhon2"},
+	{"HP_NO": "07099980007", "USER_NM": "Bonna3"},
+	{"HP_NO": "07099980008", "USER_NM": "Chhon3"},
+	{"HP_NO": "07099980009", "USER_NM": "Bonna4"},
+	{"HP_NO": "07099980010", "USER_NM": "Chhon4"},
+	{"HP_NO": "07099980011", "USER_NM": "Bonna5"},
+	{"HP_NO": "07099980012", "USER_NM": "Chhon5"},
+	{"HP_NO": "07099980013", "USER_NM": "Bonna6"},
+	{"HP_NO": "07099980014", "USER_NM": "Chhon6"},
+	{"HP_NO": "07099980015", "USER_NM": "Bonna7"},
+	{"HP_NO": "07099980016", "USER_NM": "Chhon7"},
+	{"HP_NO": "07099980017", "USER_NM": "Bonna8"},
+	{"HP_NO": "07099980018", "USER_NM": "Chhon8"},
+	{"HP_NO": "07099980019", "USER_NM": "Bonna9"},
+	{"HP_NO": "07099980020", "USER_NM": "Chhon9"},
+	{"HP_NO": "07099980021", "USER_NM": "Bonna10"}
+]}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 휴폐업 조회<br />
+<form action="http://211.217.152.156/gateway/itx_wapi.jsp" method="post" target="itx_send">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>	
+			<textarea name="JSONData">{"KEY":"ITX_WAPI01","REQ_DATA":[{"PRODUCT_CD":"ITX","SERVICE_CD":"TEST","INQ_BIZ_NO":"1112233333","CORPBIZNO":"1112233333"}],"SECR_KEY":null,"DOMN":null,"TRG":null,"SORT":null,"PG_PER_CNT":null,"PG_NO":null}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="itx_send"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+
+<div>
+# WEB 메시지 수신내역조회(pc_sendcnt_r001)<br />
+<form action="jex_api.jsp" method="post" target="pc_sendcnt_r001">
+<input type="hidden" name="WSVC_ID" value="pc_sendcnt_r001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">
+{
+	
+		"MSG_NO":"000001055",
+		"PAGINATION":{
+			"PAGE_NO":"1",
+			"PAGE_SIZE":"100"
+	}
+	
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_sendcnt_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 메시지 수신내역조회(pc_org_s001)<br />
+<form action="jex_api.jsp" method="post" target="pc_org_s001">
+<input type="hidden" name="WSVC_ID" value="pc_org_s001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">
+{
+
+	     "SAUP_NO":"2148635102",
+	     "LOGIN_ID":"1",
+	     "PTL_ID":"1",
+	     "CHNL_ID":"1",
+	     "USE_INTT_ID":"1",
+	     "CHNL_CODE":"1",
+	     "USER_GB":"1",
+	     "RECV_CNT":"1"
+	     
+
+	
+}
+</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_org_s001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 이용기관 유료사용 등록 (pc_use_org_c001)<br />
+<form action="jex_api.jsp" method="post" target="pc_use_org_c001">
+<input type="hidden" name="WSVC_ID" value="pc_use_org_c001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">
+{
+	"REG_GB":"1"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_use_org_c001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# SMS_SEND<br />
+<form action="https://platform-dev.bizplay.co.kr/GauusGate" method="post" target="sms_send">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">  {
+    "KEY": "sms_trn_0001_01_c002",
+    "SMS_CRTC_KEY": "78635117-4a21-4a16-c127-adeb9a084785",
+    "PTL_ID": null,
+    "CHNL_ID": null,
+    "USE_INTT_ID": null,
+    "TRAN_NO": null,
+    "REQ_DATA": {
+      "SEND_NUM": "15667235",
+      "SMS_MSG": "Test.",
+      "RESERVED1": null,
+      "RESERVED2": null,
+      "USE_DSNC": null,
+      "SEND_DATA": null,
+      "DEST_NUM": "087694261",
+      "NTNL_CODE": "855",
+      "GMS_USE_YN": "N"
+    }
+  }</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="sms_send"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# PUSH_SEND<br />
+<form action="http://112.187.199.29/push/standard_gateway/gateway.jsp" method="post" target="push_send">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{"_tran_cd":"MS0001","_tran_req_data":[{"_display_message":"[Testing] test","_control_cd":"","_sender_cd":"0001","_remark":"","_user_id":"greenmsg","_work_id":"greenMsg","_relation_key":"chez","_appgroup_id":"","_company_id":"","_company_msg_id":"","_retrans_yn":""}]}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="push_send"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+<div>
+# 컨텐츠내역 조회  (pc_cont_r001)<br />
+<form action="jex_api.jsp" method="post" target="pc_cont_r001">
+<input type="hidden" name="WSVC_ID" value="pc_cont_r001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">
+{
+		"SAUP_NO":"2148635102",
+		"LOGIN_ID":"1",
+		"PTL_ID":"1",
+		"CHNL_ID":"1",
+		"USEE_INTT_ID":"1"
+	
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_cont_r001"></iframe>
+		</td>
+	</tr>
+	
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 링크앱 정보조회(pc_app_r001)<br />
+<form action="jex_api.jsp" method="post" target="pc_app_r001">
+<input type="hidden" name="WSVC_ID" value="pc_app_r001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"INQ_DATE":"2014010"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_app_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 컨텐츠내역 조회  (pc_msg_c001)<br />
+<form action="jex_api.jsp" method="post" target="pc_msg_c001">
+<input type="hidden" name="WSVC_ID" value="pc_msg_c001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">
+{
+
+    "SAUP_NO": "2148635102",
+    "ENCRYPT_GB": "1",
+    "MSG_TYPE": "1",
+    "MSG_TXT": "1",
+    "LINK_CD": "1",
+    "SND_GB": "1",
+    "USER_REC": [
+      {
+        "USER_NO": "000009165"
+      }
+    ],
+    "GROUP_REC": [
+      {
+        "GROUP_NO": "1"
+      }
+    ],
+    "PHOTO_REC": [
+      {
+        "PHOTO": "1"
+      }
+    ],
+    "SEND_NM": "1",
+    "CHNL_CODE": "001",
+    "CHRG_GB": "1",
+    "PTL_ID": "1",
+    "CHNL_ID": "1",
+    "USE_INTT_ID": "1",
+    "SAUP_NM": "1",
+    "CNTS_CD": "1"
+
+}
+
+</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_msg_c001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 수신처 조회(pc_receiver_r001)<br />
+<form action="jex_api.jsp" method="post" target="pc_receiver_r001">
+<input type="hidden" name="WSVC_ID" value="pc_receiver_r001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"INQ_DATE":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_receiver_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 그룹구성원 조회(pc_gruser_r001)<br />
+<form action="jex_api.jsp" method="post" target="pc_gruser_r001">
+<input type="hidden" name="WSVC_ID" value="pc_gruser_r001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"GROUP_NO":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_gruser_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 미확인자 SMS전송(pc_sms_c001)<br />
+<form action="jex_api.jsp" method="post" target="pc_sms_c001">
+<input type="hidden" name="WSVC_ID" value="pc_sms_c001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"MSG_NO":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_sms_c001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 연락처 조회(pc_user_r001)<br />
+<form action="jex_api.jsp" method="post" target="pc_user_r001">
+<input type="hidden" name="WSVC_ID" value="pc_user_r001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"INQ_DATE":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_user_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 연락처 수정(pc_user_u001)<br />
+<form action="jex_api.jsp" method="post" target="pc_user_u001">
+<input type="hidden" name="WSVC_ID" value="pc_user_u001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"USER_NO":"test",
+	"USER_NM":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_user_u001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 연락처 (pc_user_c001)<br />
+<form action="jex_api.jsp" method="post" target="pc_user_c001">
+<input type="hidden" name="WSVC_ID" value="pc_user_c001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"USER_NM":"test",
+	"HP_NO":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_user_c001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+
+<div>
+# WEB 연락처 삭제(pc_user_d001)<br />
+<form action="jex_api.jsp" method="post" target="pc_user_d001">
+<input type="hidden" name="WSVC_ID" value="pc_user_d001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"DEL_CNT":"test",
+	"DEL_REC": [
+		{"USER_NO":""}
+	]
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_user_d001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 엑셀연락처 가져오기(pc_excelrcv_c001)<br />
+<form action="jex_api.jsp" method="post" target="pc_excelrcv_c001">
+<input type="hidden" name="WSVC_ID" value="pc_excelrcv_c001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"REG_CNT":"test",
+	"REG_REC": [
+		{"USER_NM":""},
+		{"HP_NO":""}
+	]
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_excelrcv_c001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 그룹 조회(pc_group_r001)<br />
+<form action="jex_api.jsp" method="post" target="pc_group_r001">
+<input type="hidden" name="WSVC_ID" value="pc_group_r001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"INQ_DATE":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_group_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 그룹 추가(pc_group_c001)<br />
+<form action="jex_api.jsp" method="post" target="pc_group_c001">
+<input type="hidden" name="WSVC_ID" value="pc_group_c001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"GRP_NM":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_group_c001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 그룹 수정(pc_group_u001)<br />
+<form action="jex_api.jsp" method="post" target="pc_group_u001">
+<input type="hidden" name="WSVC_ID" value="pc_group_u001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"GRP_NO":"test"
+	"GRP_NM":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_group_u001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 그룹 삭제(pc_group_d001)<br />
+<form action="jex_api.jsp" method="post" target="pc_group_d001">
+<input type="hidden" name="WSVC_ID" value="pc_group_d001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"DEL_CNT":"test",
+	"DEL_REC":[
+		{"GRP_NO":"test"}
+	]
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_group_d001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 그룹구성원 등록(pc_gruser_c001)<br />
+<form action="jex_api.jsp" method="post" target="pc_gruser_c001">
+<input type="hidden" name="WSVC_ID" value="pc_gruser_c001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"GRP_NO":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_gruser_c001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 그룹구성원 조회(pc_gruser_r002)<br />
+<form action="jex_api.jsp" method="post" target="pc_gruser_r002">
+<input type="hidden" name="WSVC_ID" value="pc_gruser_r002" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"GRP_NO":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_gruser_r002"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 그룹구성원 삭제(pc_gruser_d001)<br />
+<form action="jex_api.jsp" method="post" target="pc_gruser_d001">
+<input type="hidden" name="WSVC_ID" value="pc_gruser_d001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"GRP_NO":"test",
+	"DEL_CNT":"test",
+	"DEL_REC":[
+		{"USER_NO":""}
+	]
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_gruser_d001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 프로필 조회(pc_profile_r001)<br />
+<form action="jex_api.jsp" method="post" target="pc_profile_r001">
+<input type="hidden" name="WSVC_ID" value="pc_profile_r001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_profile_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 프로필 수정(pc_profile_u001)<br />
+<form action="jex_api.jsp" method="post" target="pc_profile_u001">
+<input type="hidden" name="WSVC_ID" value="pc_profile_u001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"ORG_NM":"test",
+	"PHOTO":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_profile_u001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 공지사항 조회(pc_noti_r001)<br />
+<form action="jex_api.jsp" method="post" target="pc_noti_r001">
+<input type="hidden" name="WSVC_ID" value="pc_noti_r001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"INQ_DATE":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_noti_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+<!-- vuth
+<div>
+# WEB 공지사항 조회(pc_link_r001)<br />
+<form action="jex_api.jsp" method="post" target="pc_link_r001">
+<input type="hidden" name="WSVC_ID" value="pc_link_r001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"REG_DT":"20140508"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_link_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+vuth -->
+<div>
+# WEB 공지사항 상세조회(pc_noti_r002)<br />
+<form action="jex_api.jsp" method="post" target="pc_noti_r002">
+<input type="hidden" name="WSVC_ID" value="pc_noti_r002" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"NOTI_NO":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_noti_r002"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB LINK정보 조회(pc_link_r001)<br />
+<form action="jex_api.jsp" method="post" target="pc_link_r001">
+<input type="hidden" name="WSVC_ID" value="pc_link_r001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"INQ_DATE":"20140101"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_link_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB LINK정보 상세조회(pc_link_r002)<br />
+<form action="jex_api.jsp" method="post" target="pc_link_r002">
+<input type="hidden" name="WSVC_ID" value="pc_link_r002" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"NOTI_NO":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_link_r002"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB LINK정보 등록(pc_link_c001)<br />
+<form action="jex_api.jsp" method="post" target="pc_link_c001">
+<input type="hidden" name="WSVC_ID" value="pc_link_c001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"LINK_GB":"1",
+	"APP_NM":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_link_c001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB LINK정보 수정(pc_link_u001)<br />
+<form action="jex_api.jsp" method="post" target="pc_link_u001">
+<input type="hidden" name="WSVC_ID" value="pc_link_u001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"APPCD_NO": "0000001",
+	"LINK_GB":"1",
+	"APP_NM":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_link_u001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB LINK정보 삭제(pc_link_d001)<br />
+<form action="jex_api.jsp" method="post" target="pc_link_d001">
+<input type="hidden" name="WSVC_ID" value="pc_link_d001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"NOTI_NO":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_link_d001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+
+<div>
+# WEB 본문SMS발송 설정 조회 (pc_smsreg_r002)<br />
+<form action="jex_api.jsp" method="post" target="pc_smsreg_r002">
+<input type="hidden" name="WSVC_ID" value="pc_smsreg_r002" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+		"PTL_ID":"PTL_51",
+		"CHNL_ID":"CHNL_1",
+		"USE_INTT_ID":"0001"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_smsreg_r002"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+<div>
+# WEB 본문SMS발송 설정 조회 (pc_smsreg_u002)<br />
+<form action="jex_api.jsp" method="post" target="pc_smsreg_u002">
+<input type="hidden" name="WSVC_ID" value="pc_smsreg_u002" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+		"PTL_ID":"PTL_51",
+		"CHNL_ID":"CHNL_1",
+		"USE_INTT_ID":"0001",
+		"SMS_GB":"1"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_smsreg_u002"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 기관정보등록(pc_org_c001)<br />
+<form action="jex_api.jsp" method="post" target="pc_org_c001">
+<input type="hidden" name="WSVC_ID" value="pc_org_c001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+		"SAUP_NO":"2148635102",
+		"LOGIN_ID":"webcash",
+		"ORG_NM":"test",
+		"PHOTO":"test",
+		"PTL_ID":"PTL_62",
+		"SAUP_NM":"test",
+		"SEND_NM":"test",
+		"CHNL_ID":"CHNL_1",
+		"USE_INTT_ID":"test"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_org_c001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+
+<div>
+# WEB 메시지 발신내역 조회(pc_msg_r001)<br />
+<form action="jex_api.jsp" method="post" target="pc_msg_r001">
+<input type="hidden" name="WSVC_ID" value="pc_msg_r001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+			"SAUP_NO":"2148635102",
+			"INQ_GB":"1",
+			"INQ_DATA":"",
+			"SEND_FRDT":"20141031",
+			"SEND_TODT":"20141231"
+	}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_msg_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 전문 작업(pc_smsreg_r002)<br />
+<form action="jex_api.jsp" method="post" target="pc_smsreg_r002">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+		"PTL_ID":"PTL_51",
+		"CHNL_ID":"0001",
+		"USE_INTT_ID":"0001"
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_smsreg_r002"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+</body>
+</html>

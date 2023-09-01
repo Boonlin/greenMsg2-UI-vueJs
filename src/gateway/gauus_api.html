@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+<style type="text/css">
+
+table {
+	width: 100%;
+}
+
+textarea {
+	width: 100%; 
+	height: 200px;
+}
+
+iframe {
+	width: 100%; 
+	height: 200px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div>
+# Update term status<br />
+<form action="user_terms_u001.jct" method="post" target="">
+<input type="hidden" name="TERM_STTS" value="N">
+<table>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 그린박스 발송 OPEN API(green_msg_send)<br />
+<form action="gauus_api.jsp" method="post" target="green_msg_send">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"green_msg_send",
+	"SECR_KEY":"de1cccb3-f944-9448-b91a-a8db30752f04",
+	"USER_ID":"000000434",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"SAUP_NO": "8559889170",
+		"ENCRYPT_GB": "1",
+		"MSG_TYPE": "1",
+		"MSG_TXT": "메시지내용",
+		"LINK_CD": "0001410",
+		"LINK_NM": "비즈플레이 바로가기",
+		"LINK_URL": "http://www.bizplay.co.kr",
+		"USER_REC":[
+			{"HP_NO":"098891708"}
+		],
+		"PHOTO_REC":[
+			{"PHOTO":"1"}
+		],
+		"SEND_NM": "PK",
+		"CHNL_CODE": "0001",
+		"SMS_TXT": "1",
+		"CNTS_CD": "000000010"
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="green_msg_send"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+<div>
+# 그린박스 발송 OPEN API(green_msg_ptlsend)<br />
+<form action="gauus_api.jsp" method="post" target="green_msg_ptlsend">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"green_msg_ptlsend",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"SAUP_NO": "2148635102",
+		"ENCRYPT_GB": "1",
+		"MSG_TYPE": "1",
+		"MSG_TXT": "1",
+		"LINK_CD": "0001410",
+		"LINK_NM": "google.com",
+		"LINK_URL": "www.google.com",
+		"USER_REC":[
+			{"HP_NO":"01922229919"}
+		],
+		"PHOTO_REC":[
+			{"PHOTO":"1"}
+		],
+		"SEND_NM": "1",
+		"CHNL_CODE": "0001",
+		"SMS_TXT": "1",
+		"CHRG_GB": "",
+		"PTL_ID": "PTL_51",
+		"CHNL_ID": "CHNL_1",
+		"USE_INTT_ID": "0001",
+		"SAUP_NM": "",
+		"CNTS_CD": "000000001"
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="green_msg_ptlsend"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 그린메시지 APP 설치여부 조회(green_app_inqy)<br />
+<form action="gauus_api.jsp" method="post" target="green_app_inqy">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"green_app_inqy",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"SAUP_NO": "2148635102",
+		"HP_NO": "1"
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="green_app_inqy"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+
+<div>
+# 사용자 최초접속 요청(user_cont_r001)<br />
+<form action="gauus_api.jsp" method="post" target="user_cont_r001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_cont_r001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"CUR_APP_VER":"1",
+		"PUSH_ID":"1",
+		"DVC_ID":"1",
+		"MODEL_NM":"1",
+		"OS":"1"
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_cont_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 사용자 최초접속 요청(pc_link_c001)<br />
+<form action="gauus_api.jsp" method="post" target="pc_link_c001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"pc_link_c001",
+	"APP_TYPE":"1",
+	"USER_ID":"000000164",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"LINK_GB":"2",
+		"APP_NM":"bizpay"
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_link_c001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+
+<div>
+# 사용자 최초접속 요청(pc_org_s001)<br />
+<form action="gauus_api.jsp" method="post" target="pc_org_s001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"pc_org_s001",
+	"USER_ID":"000000001",
+	"TR_TIME":"20140101112233",
+	"APP_TYPE":"1",
+	"REQ_DATA":{
+		"SAUP_NO":"2148635105",
+		"LOGIN_ID":"2148635105",
+		"PTL_ID":"2148635105"
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_org_s001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 사용자 인증번호 요청(user_cert_r001)<br />
+<form action="gauus_api.jsp" method="post" target="user_cert_r001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_cert_r001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"HP_NO":"",
+		"USER_NM":""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_cert_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 사용자 인증번호 확인(user_cert_c001)<br />
+<form action="gauus_api.jsp" method="post" target="user_cert_c001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_cert_c001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"SMS_KEY":"",
+		"AUTH_NO":""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_cert_c001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 사용자 이용약관 조회(user_terms_r001)<br />
+<form action="gauus_api.jsp" method="post" target="user_terms_r001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_terms_r001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"INQ_DATE":""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_terms_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 사용자 개인정보방침 조회(user_policy_r001)<br />
+<form action="gauus_api.jsp" method="post" target="user_policy_r001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_policy_r001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"INQ_DATE":""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_policy_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+
+<div>
+# 사용자 등록(user_c001)<br />
+<form action="gauus_api.jsp" method="post" target="user_c001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_c001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"HP_NO": "",
+		"USER_NM": "",
+		"PUSH_ID": "",
+		"DVC_ID": "",
+		"MODEL_NM": "",
+		"OS": ""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_c001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 사용자 메시지 수신내역(user_msg_r001)<br />
+<form action="gauus_api.jsp" method="post" target="user_msg_r001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_msg_r001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"MORE_GB": "",
+		"LAST_MSGNO":""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_msg_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 사용자 메시지 삭제(user_msg_d001)<br />
+<form action="gauus_api.jsp" method="post" target="user_msg_d001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_msg_d001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"MSG_NO": ""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_msg_d001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 발신처 메시지 차단(user_org_s001)<br />
+<form action="gauus_api.jsp" method="post" target="user_org_s001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_org_s001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"ORG_NO": ""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_org_s001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 기관별 메시지 모아보기(user_orgmsg_r001)<br />
+<form action="gauus_api.jsp" method="post" target="user_orgmsg_r001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_orgmsg_r001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"ORG_NO": ""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_orgmsg_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 메시지 상세보기(user_msgdetail_r001)<br />
+<form action="gauus_api.jsp" method="post" target="user_msgdetail_r001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_msgdetail_r001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"MSG_NO": ""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_msgdetail_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 수신내역 사진원본 조회(user_photo_r001)<br />
+<form action="gauus_api.jsp" method="post" target="user_photo_r001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_photo_r001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"MSG_NO": "",
+		"PHOTO_NO": ""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_photo_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 푸시 알림받기 설정(user_pushset_c001)<br />
+<form action="gauus_api.jsp" method="post" target="user_pushset_c001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_pushset_c001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"PUSH_ID": "",
+		"DVC_ID": "",
+		"MODEL_NM": "",
+		"OS": ""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_pushset_c001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 푸시 알림받기 설정조회(user_pushset_r001)<br />
+<form action="gauus_api.jsp" method="post" target="user_pushset_r001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_pushset_r001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"INQ_DATE": ""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_pushset_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 발신처 차단내역 조회(user_org_r001)<br />
+<form action="gauus_api.jsp" method="post" target="user_org_r001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_org_r001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"INQ_DATE": ""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_org_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 발신처 메시지 차단해제(user_org_p001)<br />
+<form action="gauus_api.jsp" method="post" target="user_org_p001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_org_p001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"ORG_NO": ""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_org_p001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 사용자 서비스 해지(user_close_u001)<br />
+<form action="gauus_api.jsp" method="post" target="user_close_u001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_close_u001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"REG_DATE": ""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_close_u001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 사용자 정보조회(user_profile_r001)<br />
+<form action="gauus_api.jsp" method="post" target="user_profile_r001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_profile_r001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"INQ_DATE": ""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_profile_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 사용자 정보수정(user_profile_u001)<br />
+<form action="gauus_api.jsp" method="post" target="user_profile_u001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_profile_u001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"USER_NM": ""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_profile_u001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 사용자 공지사항 조회(user_notice_r001)<br />
+<form action="gauus_api.jsp" method="post" target="user_notice_r001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_notice_r001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"NOTI_GB": ""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_notice_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 사용자 문의 및 개선 요청(user_reqst_c001)<br />
+<form action="gauus_api.jsp" method="post" target="user_reqst_c001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_reqst_c001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"REG_GB": "",
+		"REQST_GB": "",
+		"REG_NM": "",
+		"REQST_TXT": ""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_reqst_c001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 사용자 프로그램 정보(user_pgm_r001)<br />
+<form action="gauus_api.jsp" method="post" target="user_pgm_r001">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"KEY":"user_pgm_r001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"CUR_VER": ""
+	}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_pgm_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+
+
+<div>
+# WEB 기관정보등록(pc_org_c001)<br />
+<form action="gauus_api.jsp" method="post" target="pc_org_c001">
+<input type="hidden" name="WSVC_ID" value="pc_org_c001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">
+{
+	"KEY":"pc_org_c001",
+	"APP_TYPE":"0",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"SAUP_NO":"2148635102",
+		"LOGIN_ID":"test",
+		"ORG_NM":"test",
+		"PHOTO":"test",
+		"PTL_ID":"test",
+		"SAUP_NM":"test",
+		"SEND_NM":"test",
+		"CHNL_ID":"test",
+		"USE_INTT_ID":"test"
+	}
+}
+			</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_org_c001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+
+
+<div>
+# WEB 메시지 발신 상세내역(pc_msg_r002)<br />
+<form action="gauus_api.jsp" method="post" target="pc_msg_r002">
+<input type="hidden" name="WSVC_ID" value="pc_msg_r002" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">
+	{
+	"KEY":"pc_msg_r002",
+	"USER_ID":"000000311",
+	"TR_TIME":"20140101112233",
+	"APP_TYPE":"0",
+	"REQ_DATA":{
+		"MSG_NO":"000001055"		
+		}
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_msg_r002"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# WEB 메시지 수신내역조회(Send sms)<br />
+<form action="http://api.cambodiasms.com/api/v3/sendsms/json" method="post" target="gauus_api.jsp">
+<input type="hidden" name="WSVC_ID" value="http://api.cambodiasms.com/api/v3/sendsms/json" />
+<table>
+		<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">
+{
+	"KEY":"green_msg_send",
+	"TR_TIME":"20140101112233",
+    "authentication":{
+        "username":"kosign",
+        "password":" "
+    },
+    "messages":[
+        {
+            "sender":"test",
+            "text":"Hellow testing mail",
+            "datacoding":"8",
+            "recipients":[
+                {
+                    "gsm":"385951111111"
+                }
+            ]
+        }
+    ]
+
+}
+</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="gauus_api.jsp"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+
+
+<div>
+# WEB 연락처 조회(pc_user_r001)<br />
+<form action="gauus_api.jsp" method="post" target="pc_user_r001">
+<input type="hidden" name="WSVC_ID" value="pc_user_r001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">
+{
+	"KEY":"pc_user_r001",
+	"USER_ID":"000000311",
+	"APP_TYPE":"0",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"USER_NM":"",
+		"GRP_NO":"",
+		"API_CD":"",
+		"MSG_NO":"000001055",
+		"PAGINATION":{
+			"PAGE_NO":"1",
+			"PAGE_SIZE":"100"
+		}
+	}
+	
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="pc_user_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 컨텐츠내역 조회  (user_cnts_r001)<br />
+<form action="gauus_api.jsp" method="post" target="user_cnts_r001">
+<input type="hidden" name="WSVC_ID" value="user_cnts_r001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">
+{
+	"KEY":"user_cnts_r001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"INQ_DATE":""
+	}
+	
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_cnts_r001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+
+<div>
+# 컨텐츠내역 조회  (user_cnts_c001)<br />
+<form action="gauus_api.jsp" method="post" target="user_cnts_c001">
+<input type="hidden" name="WSVC_ID" value="user_cnts_c001" />
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">
+{
+	"KEY":"user_cnts_c001",
+	"USER_ID":"000000001",
+	"APP_TYPE":"1",
+	"TR_TIME":"20140101112233",
+	"REQ_DATA":{
+		"REG_REC":[
+			{
+				"CNTS_NO":"",
+				"CNTS_STS":""
+			}
+		]
+	}
+	
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="user_cnts_c001"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+</body>
+</html>

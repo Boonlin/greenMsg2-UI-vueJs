@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+<style type="text/css">
+
+table {
+	width: 100%;
+}
+
+textarea {
+	width: 100%; 
+	height: 200px;
+}
+
+iframe {
+	width: 100%; 
+	height: 200px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div>
+# 직원 등록(emplinfo01)<br />
+<form action="http://emplinfo.webcash.co.kr/gw/ApiGate" method="post" target="emplinfo01">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{
+	"SVC_CD"    :   "emplinfo01",                           
+    "SECR_KEY"  :   "5cafba19-8c50-8e33-2d72-fdd82383106a", 
+    "REQ_DATA"  : {                                          
+        "PTL_ID"           :   "PTL_73",          
+        "CHNL_ID"          :   "CHNL_1",                
+        "USE_INTT_ID"      :   "UTLZ_1",         
+        "USER_ID"          :   "testid_01",         
+        "BSNN_NO"          :   "2148635102",      
+        "BSUN_CD"          :   "1",               
+        "CLPH_NO"          :   "010-1111-1111",   
+        "FLNM"             :   "홍길동",             
+        "GNDR"             :   "1",               
+        "EMP_NO"           :   "20140601123",     
+        "DVSN_CD"          :   "1",               
+        "DVSN_NM"          :   "기업전략사업센터",     
+        "JBCL_CD"          :   "1",               
+        "JBCL_NM"          :   "사원",             
+        "RSPT_CD"          :   "1",               
+        "RSPT_NM"          :   "팀원",              
+        "EXNM_NO"          :   "02-3779-0001",    
+        "EML"              :   "aa@aa.net",       
+        "BRDT"             :   "19800101",        
+        "LNR_SLCN"         :   "1",               
+        "WDNG_ANVR"        :   "20140101",        
+        "WDNG_YN"          :   "Y",               
+        "OOTL_NO"          :   "02-1111-1111",    
+        "OOH_ZPCD"         :   "150038",          
+        "OOH_POST_ADRS"    :   "서울특별시 영등포구 영신로 220 KnK디지털타워 ", 
+        "OOH_DTL_ADRS"     :   "20층",                
+        "DTPL_ZPCD"        :   "",                    
+        "DTPL_POST_ADRS"   :   "",                    
+        "DTPL_DTL_ADRS"    :   "",                    
+        "PRFL_PHTG"        :   "http://profile.png"   
+    }                                                 
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="emplinfo01"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+<div>
+# 거래처 등록(emplinfo01)<br />
+<form action="http://b2bccstm.webcash.co.kr/gw/ApiGate" method="post" target="b2bccstm01">
+<table>
+	<tr>
+		<td>JSON_IN</td>
+		<td>
+			<textarea name="JSONData">{                                                           
+    "SVC_CD"    :   "b2bccstm01",                           
+    "SECR_KEY"  :   "4472a3a8-adbd-6d3e-c6ef-c8041cfbcfe0", 
+    "REQ_DATA"  : {                                          
+        "PTL_ID"           :   "PTL_73",          
+        "CHNL_ID"          :   "CHNL_1",                
+        "USE_INTT_ID"      :   "UTLZ_1",         
+        "BSNN_NO"          :   "2148635102",      
+        "USER_ID"          :   "",      
+        "CMNM"             :   "웹케시네트웍스",      
+        "CMPN_BSNN_NO"     :   "1078686171",      
+        "CLPH_NO"          :   "010-1111-1111",   
+        "FLNM"             :   "고길동",             
+        "GNDR"             :   "1",               
+        "DVSN_NM"          :   "기업전략사업센터",       
+        "JBCL_NM"          :   "사원",              
+        "RSPT_NM"          :   "팀원",              
+        "EXNM_NO"          :   "02-3779-0001",    
+        "FXNO"             :   "02-3779-0002",       
+        "EML"              :   "aa@aa.net",       
+        "BRDT"             :   "19800101",        
+        "LNR_SLCN"         :   "1",               
+        "WDNG_ANVR"        :   "20140101",        
+        "WDNG_YN"          :   "Y",               
+        "OOTL_NO"          :   "02-1111-1111",    
+        "OOH_ZPCD"         :   "150038",          
+        "OOH_POST_ADRS"    :   "서울특별시 영등포구 영신로 220 KnK디지털타워 ", 
+        "OOH_DTL_ADRS"     :   "20층",                
+        "DTPL_ZPCD"        :   "",                    
+        "DTPL_POST_ADRS"   :   "",                    
+        "DTPL_DTL_ADRS"    :   "",                    
+        "PRFL_PHTG"        :   "http://profile.png",   
+        "USER_DSGT_A"      :   "농구",   
+        "USER_DSGT_B"      :   "축구",   
+        "USER_DSGT_C"      :   "",   
+        "USER_DSGT_D"      :   ""   
+    }                                                 
+}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" /></td>
+	</tr>
+	<tr>
+		<td>JSON_OUT</td>
+		<td>
+			<iframe name="b2bccstm01"></iframe>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<hr />
+
+</body>
+</html>
